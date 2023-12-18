@@ -1,0 +1,18 @@
+{
+  "name": "cli-wizard-revenge",
+  "version": "1.0.0",
+  "description": "CLI WizardRevenge",
+  "main": "app.js",
+  "bin": {
+    "wizard": "./src/app.js"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/app.js"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "inquirer": "^9.2.12"
+  }
+}
