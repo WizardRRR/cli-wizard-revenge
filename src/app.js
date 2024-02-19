@@ -1,16 +1,24 @@
 #!/usr/bin/env node
 import { program } from 'commander'
-import { openProject } from './options/index.js'
+import { config } from 'dotenv'
+
+import open from './commands/open/open.js'
+import help from './commands/help/help.js'
+import create from './commands/create/create.js'
+
+config()
 
 function main() {
-  program
-    .option('-o | --open [project]', 'Abrir un proyecto 😎')
-    .parse(process.argv)
+  // commands
+  program.version('Cli-Wizard: 0.1.0v')
+  open()
+  help()
+  create()
 
-  const options = program.opts()
+  program.description('cli-wizard-repositories')
 
-  if (options.open) openProject()
-  else program.outputHelp()
+  program.parse(process.argv)
+  if (!program.args.length) program.outputHelp()
 }
 
 main()

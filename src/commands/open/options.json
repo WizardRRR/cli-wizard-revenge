@@ -1,0 +1,22 @@
+{
+  "project": {
+    "name": "project",
+    "flag": "-p, --project <project>",
+    "description": "Nombre del proyecto"
+  },
+  "github": {
+    "name": "github",
+    "flag": "-g, --github",
+    "description": "Repositorios github"
+  },
+  "local": {
+    "name": "local",
+    "flag": "-l, --local",
+    "description": "Repositorios locales"
+  },
+  "easyHotel": {
+    "name": "easyHotel",
+    "flag": "-eh, --easyHotel",
+    "description": "Repositorios de easy hotel peru"
+  }
+}

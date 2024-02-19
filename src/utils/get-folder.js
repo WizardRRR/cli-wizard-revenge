@@ -1,12 +1,12 @@
 import fs from 'fs/promises'
 import path from 'path'
 
-export const PATH_PROJECTS = 'C:\\Users\\royer\\OneDrive\\Escritorio\\PROJECTS'
+export async function getFolders(pathname) {
 
-export async function getFolders() {
-  const files = await fs.readdir(PATH_PROJECTS);
+  const files = await fs.readdir(pathname)
+  
   return files.filter(async (file) => {
-    const stats = await fs.stat(path.join(PATH_PROJECTS, file));
+    const stats = await fs.stat(path.join(pathname, file))
     return stats.isDirectory();
   })
 }
